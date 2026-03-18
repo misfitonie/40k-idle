@@ -26,6 +26,15 @@ export class CombatService {
       `${marine.name} inflige ${damage} dégâts à ${enemy.name} (${newHp}/${enemy.maxHp} HP)`,
       ...log.slice(0, 9)
     ]);
+
+    if (newHp === 0) {
+      const xpGain = Math.floor(10 + enemy.maxHp * 0.5);
+      this.state.combatLog.update(log => [
+        `${enemy.name} est vaincu ! +${xpGain} XP`,
+        ...log.slice(0, 9)
+      ]);
+      this.state.grantXp(xpGain);
+    }
   }
 
   private enemyAttacks(): void {

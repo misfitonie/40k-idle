@@ -11,6 +11,12 @@
         </div>
       </div>
       <p>{{ state.marine().hp }} / {{ state.marine().maxHp }} HP</p>
+      <div class="bar-wrap">
+        <div class="bar xp"
+          [style.width.%]="(state.marine().xp / state.marine().maxXp) * 100">
+        </div>
+      </div>
+      <p>{{ state.marine().xp }} / {{ state.marine().maxXp }} XP</p>
     </div>
 
     <div class="vs">VS</div>

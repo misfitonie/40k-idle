@@ -9,4 +9,6 @@ export interface Marine {
   maxHp: number;
   attack: number;
   defense: number;
+  xp: number;
+  maxXp: number;
 }

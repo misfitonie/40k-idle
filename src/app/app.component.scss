@@ -38,6 +38,7 @@
   transition: width 0.3s ease;
   &.hp        { background: #2e7d32; }
   &.enemy-hp  { background: #b71c1c; }
+  &.xp        { background: #b8860b; }
 }
 
 .vs {
